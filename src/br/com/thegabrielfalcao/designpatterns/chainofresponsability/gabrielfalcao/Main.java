@@ -1,20 +1,39 @@
 package br.com.thegabrielfalcao.designpatterns.chainofresponsability.gabrielfalcao;
 
 import br.com.thegabrielfalcao.designpatterns.chainofresponsability.gabrielfalcao.collector.CoinCollector;
+import br.com.thegabrielfalcao.designpatterns.chainofresponsability.gabrielfalcao.collector.HundredCoinCollector;
+import br.com.thegabrielfalcao.designpatterns.chainofresponsability.gabrielfalcao.collector.Machine;
 import br.com.thegabrielfalcao.designpatterns.chainofresponsability.gabrielfalcao.collector.impl.FiftyCoinCollector;
 import br.com.thegabrielfalcao.designpatterns.chainofresponsability.gabrielfalcao.collector.impl.FiveCoinCollector;
 import br.com.thegabrielfalcao.designpatterns.chainofresponsability.gabrielfalcao.collector.impl.TenCoinCollector;
 import br.com.thegabrielfalcao.designpatterns.chainofresponsability.gabrielfalcao.collector.impl.TwentyFiveCoinCollector;
 import br.com.thegabrielfalcao.designpatterns.chainofresponsability.gabrielfalcao.model.Coin;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        Coin coin = new Coin(25);
-        CoinCollector coinCollector = new FiveCoinCollector();
-        coinCollector.linkWith(new TenCoinCollector()).linkWith(new TwentyFiveCoinCollector()).linkWith(new FiftyCoinCollector());
+        Scanner scanner = new Scanner(System.in);
+        int productValue = 100;
 
-        coinCollector.pickCoin(coin);
+        do {
+            System.out.println("Insert a coin:");
+
+            Coin coin = new Coin(scanner.nextInt());
+
+            Machine machine = new Machine();
+
+            int coinPicked = machine.pick(coin);
+
+            productValue -= coinPicked;
+
+            if (productValue < 0) {
+                System.out.println("Your change: [" + productValue * -1 + "]");
+                productValue = 0;
+            }
+        } while (productValue != 0);
+
     }
 }
