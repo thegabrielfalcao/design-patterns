@@ -15,8 +15,20 @@ Minhas principais intenções com o aprendizado desses padrões são eliminar os
 
 ### Strategy
 No pacote do **Strategy** só teremos um exemplo, criado por mim, que é uma calculadora bem simples.
-Nesse caso específico em vez de receber uma *String* com o nome da operação [To be continued...]
+Nesse caso específico em vez de receber uma *String* com o nome da operação, 
+e ter quatro *ifs* para cada operação possível nessa calculadora, eu crio uma interface que chamo
+de **OperacaoMatematica** e abstraio cada operação para uma classe, por exemplo:
+
+A classe **Subtracao** irá implementar a interface, obrigando a essa classe ter o método **calcular()**, e dentro desse
+método calcular da classe **Subtracao** irá ter a operação que subtrairá o primeiro número com o segundo.
+
+Isso será feito com todas as quatro classes (Subtracao, Adicao, Multiplicacao e Divisao), 
+alterando apenas a forma como a implementação é feita.
 
 ### Chain of Responsability
 
 ### Template Method
+
+## Structural patterns (Padrões estruturais)
+
+### Decorator
