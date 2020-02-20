@@ -25,6 +25,8 @@ método calcular da classe **Subtracao** irá ter a operação que subtrairá o 
 Isso será feito com todas as quatro classes (Subtracao, Adicao, Multiplicacao e Divisao), 
 alterando apenas a forma como a implementação é feita.
 
+![Strategy Image](https://refactoring.guru/images/patterns/diagrams/strategy/structure.png)
+
 ### Chain of Responsability
 
 ### Template Method
@@ -32,3 +34,5 @@ alterando apenas a forma como a implementação é feita.
 ## Structural patterns (Padrões estruturais)
 
 ### Decorator
+
+![Decorator Image](https://refactoring.guru/images/patterns/diagrams/decorator/structure.png)
