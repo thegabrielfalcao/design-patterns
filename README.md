@@ -35,4 +35,19 @@ alterando apenas a forma como a implementação é feita.
 
 ### Decorator
 
+No pacote **Decorator** estão dois exemplos, um do site Refactoring Guru, outro foi um exercício que encontrei na internet
+onde deveria solucionar utilizando o pattern **Decorator**.
+
+Tal pattern consiste em uma interface (*component*) que será implementado pelo o que chamamos de *concrete component*. 
+O *concrete component* conterá a função principal do que queremos fazer (ficará mais claro com os exemplos abaixo). 
+Teremos também o que chamaremos de *base decorator* onde também implementará o *component* e servirá de base para os
+*concrete decorators*.
+Os 
+
+No exemplo do Refactoring Guru foi-se utilizado um exemplo onde se irá escrever um arquivo
+
 ![Decorator Image](https://refactoring.guru/images/patterns/diagrams/decorator/structure.png)
+
+
+
+![Decorator Image Exemplo](https://i.imgur.com/GbZ1j9s.png)
