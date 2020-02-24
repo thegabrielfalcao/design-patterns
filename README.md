@@ -27,11 +27,11 @@ alterando apenas a forma como a implementação é feita.
 
 ![Strategy Image](https://refactoring.guru/images/patterns/diagrams/strategy/structure.png)
 
-UML do pattern Strategy
+**UML do pattern Strategy**
 
 ![Strategy Calculadora Image](https://i.imgur.com/PQ2zqPD.png)
 
-UML do exemplo que criei
+**UML do exemplo que criei**
 
 ### Chain of Responsability
 
