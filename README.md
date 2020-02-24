@@ -27,6 +27,12 @@ alterando apenas a forma como a implementação é feita.
 
 ![Strategy Image](https://refactoring.guru/images/patterns/diagrams/strategy/structure.png)
 
+UML do pattern Strategy
+
+![Strategy Calculadora Image](https://i.imgur.com/PQ2zqPD.png)
+
+UML do exemplo que criei
+
 ### Chain of Responsability
 
 ### Template Method
@@ -42,12 +48,31 @@ Tal pattern consiste em uma interface (*component*) que será implementado pelo 
 O *concrete component* conterá a função principal do que queremos fazer (ficará mais claro com os exemplos abaixo). 
 Teremos também o que chamaremos de *base decorator* onde também implementará o *component* e servirá de base para os
 *concrete decorators*.
-Os 
+Os *concrete decorators* serão responsáveis por mudar o comportamento antes que ocorra a principal função que deverá ocorrer
+(código que fica no *concrete component*).
 
-No exemplo do Refactoring Guru foi-se utilizado um exemplo onde se irá escrever um arquivo
+No site Refactoring Guru foi-se utilizado um exemplo onde se irá escrever um arquivo (*concrete component*), e antes
+que isso ocorra, ou seja, antes de escrever o arquivo, iremos usar os *concrete decorators* para podermos, se quisermos,
+criptografar e/ou comprimir o arquivo.
+
+No exercício que fiz foi para resolver o seguinte exercício:
+
+*Crie um objeto simples que armazene um texto que possa ser recuperado com
+um método getTexto(). Crie decoradores que retornem o texto: a) em caixa-alta,
+b) invertido e c) cercado por tags \<b> e <\/b>. Teste os decoradores
+individualmente e em cascata.*
+
+Para a solução acima o *concrete component* terá a única responsabilidade de retornar uma *String*, ou seja, o texto que
+eu passar para essa classe irá me retornar a mesma, porém além disso existem os decorators, que nesse caso irão mudar o
+comportamento principal de retornar essa String, ou seja, agora eu tenho uma classe específica para tornar o texto em 
+caixa alta, tornar esse texto tagueado, e tornar esse texto invertido, podendo utilizar nenhum, um ou todos esses decorators 
+para retornar o texto da forma que eu bem entender.
+
 
 ![Decorator Image](https://refactoring.guru/images/patterns/diagrams/decorator/structure.png)
 
-
+UML do pattern Decorator
 
 ![Decorator Image Exemplo](https://i.imgur.com/GbZ1j9s.png)
+
+UML gerado para o exercício que solucionei
