@@ -13,8 +13,10 @@ Minhas principais intenções com o aprendizado desses padrões são eliminar os
 
 ## Index
 
-- [Padrões Comportamentais](##Behavioral patterns (Padrões comportamentais))
+- Padrões Comportamentais
     - [Strategy](###Strategy)
+- Padrões estruturais
+    - [Decorator](###Decorator)
 
 ## Behavioral patterns (Padrões comportamentais)
 
