@@ -11,6 +11,11 @@ A maioria (se não todos) dos design patterns nos pacotes conterão exemplos des
 
 Minhas principais intenções com o aprendizado desses padrões são eliminar os ifs desnecessários, aumentar a reusabilidade e evitar a duplicação de código.
 
+##Index
+
+- [Padrões Comportamentais](##Behavioral patterns (Padrões comportamentais))
+    - [Strategy](###Strategy)
+
 ## Behavioral patterns (Padrões comportamentais)
 
 ### Strategy
