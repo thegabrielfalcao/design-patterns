@@ -16,9 +16,9 @@ Minhas principais intenções com o aprendizado desses padrões são eliminar os
 - [Padrões Comportamentais](##Behavioral patterns (Padrões comportamentais))
     - [Strategy](###Strategy)
 
-## Behavioral patterns (Padrões comportamentais)
+##Behavioral patterns (Padrões comportamentais)
 
-### Strategy
+###Strategy
 No pacote do **Strategy** só teremos um exemplo, criado por mim, que é uma calculadora bem simples.
 Nesse caso específico em vez de receber uma *String* com o nome da operação, 
 e ter quatro *ifs* para cada operação possível nessa calculadora, eu crio uma interface que chamo
