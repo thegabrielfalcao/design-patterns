@@ -71,8 +71,8 @@ para retornar o texto da forma que eu bem entender.
 
 ![Decorator Image](https://refactoring.guru/images/patterns/diagrams/decorator/structure.png)
 
-UML do pattern Decorator
+**UML do pattern Decorator**
 
 ![Decorator Image Exemplo](https://i.imgur.com/GbZ1j9s.png)
 
-UML gerado para o exercício que solucionei
+**UML gerado para o exercício que solucionei**
