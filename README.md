@@ -42,6 +42,27 @@ alterando apenas a forma como a implementação é feita.
 **UML do exemplo que criei**
 
 ### Chain of Responsability
+No pacote referente ao **Chain of Responsability** iremos encontrar quatro exemplos, um 
+da **Alura**, um do **Refactoring Guru**, um que criei onde simula uma máquina de vendas e 
+por último um exemplo que tirei da *cachola* a fim de passar uma reclamação para a área responsável.
+
+Tal pattern consiste em abstrairmos em uma interface ou em uma classe abstrata (para unirmos
+o *boiling plate code*) uma execução que será implementada por todos os **handlers**. 
+Os **handlers** serão classes concretas que terão comportamentos específicos. Como se trata de uma **cadeia**, ou de um 
+**fluxo**, a ideia é que cada **handler** execute seu comportamento e passe para o próximo **handler** da cadeia, até que
+se quebre por algum motivo ou passe por todo esse fluxo que foi definido.
+
+Por exemplo o código da Alura, é simulado que existam produtos em um orçamento, e você poderá ganhar desconto
+dependendo da quantidade de itens ou do valor total dos itens que você tiver no seu orçamento.
+
+Nossa cadeia será abstraida por uma interface chamada de **Desconto**, e as classes concretas (**DescontoPorCincoItens**, 
+**DescontoValorMaiorQuinhentosReais** e **SemDesconto**) serão responsáveis por verificar se esse orçamento é passível
+de desconto ou não, caso seja a classe responsável por essa verificação irá retornar o desconto do orçamento, caso não 
+irá chegar na classe **SemDesconto** onde retornará 0.
+
+O exemplo da Alura é mais tranquilo e legal de se ver funcionando o **Chain**, entretanto o exemplo do Refactoring Guru, 
+que inclusive usei de base para solucionar os outros exemplos que resolvi, é mais elegante pois vemos o boiling plate
+apenas na classe abstrata, ao contrário da Alura que utiliza interface, te obrigando a reescrever esse código. 
 
 ### Template Method
 

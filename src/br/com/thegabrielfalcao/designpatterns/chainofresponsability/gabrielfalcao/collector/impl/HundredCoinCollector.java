@@ -1,5 +1,6 @@
-package br.com.thegabrielfalcao.designpatterns.chainofresponsability.gabrielfalcao.collector;
+package br.com.thegabrielfalcao.designpatterns.chainofresponsability.gabrielfalcao.collector.impl;
 
+import br.com.thegabrielfalcao.designpatterns.chainofresponsability.gabrielfalcao.collector.CoinCollector;
 import br.com.thegabrielfalcao.designpatterns.chainofresponsability.gabrielfalcao.model.Coin;
 
 public class HundredCoinCollector extends CoinCollector {

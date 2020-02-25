@@ -1,9 +1,6 @@
 package br.com.thegabrielfalcao.designpatterns.chainofresponsability.gabrielfalcao.collector;
 
-import br.com.thegabrielfalcao.designpatterns.chainofresponsability.gabrielfalcao.collector.impl.FiftyCoinCollector;
-import br.com.thegabrielfalcao.designpatterns.chainofresponsability.gabrielfalcao.collector.impl.FiveCoinCollector;
-import br.com.thegabrielfalcao.designpatterns.chainofresponsability.gabrielfalcao.collector.impl.TenCoinCollector;
-import br.com.thegabrielfalcao.designpatterns.chainofresponsability.gabrielfalcao.collector.impl.TwentyFiveCoinCollector;
+import br.com.thegabrielfalcao.designpatterns.chainofresponsability.gabrielfalcao.collector.impl.*;
 import br.com.thegabrielfalcao.designpatterns.chainofresponsability.gabrielfalcao.model.Coin;
 
 public class Machine {
