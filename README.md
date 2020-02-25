@@ -66,6 +66,8 @@ apenas na classe abstrata, ao contrário da Alura que utiliza interface, te obri
 
 ### Template Method
 
+### State
+
 ## Structural patterns (Padrões estruturais)
 
 ### Decorator
