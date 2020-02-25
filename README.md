@@ -16,6 +16,8 @@ Minhas principais intenções com o aprendizado desses padrões são eliminar os
 - Padrões Comportamentais
     - [Strategy](#Strategy)
     - [Chain of Responsability](#Chain-of-Responsability)
+    - [Template Method](#Template-Method)
+    - [State](#State)
 - Padrões estruturais
     - [Decorator](#Decorator)
 
