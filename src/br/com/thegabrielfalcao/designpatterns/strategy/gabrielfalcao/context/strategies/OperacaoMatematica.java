@@ -1,4 +1,4 @@
-package br.com.thegabrielfalcao.designpatterns.strategy.context.strategies;
+package br.com.thegabrielfalcao.designpatterns.strategy.gabrielfalcao.context.strategies;
 
 /**
  * Interface que abstrai o que toda operacao matemática faz, que é calcular, onde seus filhos terão as implementações

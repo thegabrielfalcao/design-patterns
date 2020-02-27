@@ -11,6 +11,9 @@ A maioria (se não todos) dos design patterns nos pacotes conterão exemplos des
 
 Minhas principais intenções com o aprendizado desses padrões são eliminar os ifs desnecessários, aumentar a reusabilidade e evitar a duplicação de código.
 
+> **Observação:** Aconselho que estude as motivações e as formas de implementar os design patterns por fora, e use esse 
+repositório apenas para ver como foi implementado nos exemplos que commitei.
+
 ## Index
 
 - Padrões Comportamentais
@@ -24,7 +27,7 @@ Minhas principais intenções com o aprendizado desses padrões são eliminar os
 ## Behavioral patterns (Padrões comportamentais)
 
 ### Strategy
-No pacote do **Strategy** só teremos um exemplo, criado por mim, que é uma calculadora bem simples.
+No pacote do **Strategy** temos dois exemplos, um criado por mim, que é uma calculadora bem simples.
 Nesse caso específico em vez de receber uma *String* com o nome da operação, 
 e ter quatro *ifs* para cada operação possível nessa calculadora, eu crio uma interface que chamo
 de **OperacaoMatematica** e abstraio cada operação para uma classe, por exemplo:
@@ -34,6 +37,23 @@ método calcular da classe **Subtracao** irá ter a operação que subtrairá o 
 
 Isso será feito com todas as quatro classes (Subtracao, Adicao, Multiplicacao e Divisao), 
 alterando apenas a forma como a implementação é feita.
+
+O outro exemplo é a solução para o seguinte exercício:
+
+*1. Escreva um programa que descubra o dia da semana e, repasse o controle para
+ uma estratégia específica:*
+
+- *A estratégia deve imprimir a mensagemDoDia() correspondente ao dia
+ da semana.*
+
+- *Para descobrir o dia da semana crie um new GregorianCalendar() para
+ obter a data corrente e use get(Calendar.DAY_OF_WEEK) para obter o
+ dia da semana (de 0 a 6)*
+ 
+Para solucionar esse exercício utilizei o mesmo modelo, criei uma interface *MensagemDoDia* que abstrai todas as 
+implementações, criei uma classe concreta para cada dia da semana que irá devolver uma *String* diferente para tal dia,
+a única diferença aqui é na classe *Context*, onde preferi utilizar um **enum** que receberá o id do dia da semana e
+devolverá a instância do dia corretamente, escrevendo o texto para o dia da semana que for.
 
 ![Strategy Image](https://refactoring.guru/images/patterns/diagrams/strategy/structure.png)
 

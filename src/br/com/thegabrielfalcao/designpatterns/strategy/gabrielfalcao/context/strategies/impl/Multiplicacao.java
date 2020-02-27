@@ -1,6 +1,6 @@
-package br.com.thegabrielfalcao.designpatterns.strategy.context.strategies.impl;
+package br.com.thegabrielfalcao.designpatterns.strategy.gabrielfalcao.context.strategies.impl;
 
-import br.com.thegabrielfalcao.designpatterns.strategy.context.strategies.OperacaoMatematica;
+import br.com.thegabrielfalcao.designpatterns.strategy.gabrielfalcao.context.strategies.OperacaoMatematica;
 
 public class Multiplicacao implements OperacaoMatematica {
 
