@@ -23,6 +23,8 @@ repositório apenas para ver como foi implementado nos exemplos que commitei.
     - [State](#State)
 - Padrões estruturais
     - [Decorator](#Decorator)
+- Padrões criacionais
+    - [Builder](#Builder)
 
 ## Behavioral patterns (Padrões comportamentais)
 
@@ -129,3 +131,7 @@ para retornar o texto da forma que eu bem entender.
 ![Decorator Image Exemplo](https://i.imgur.com/GbZ1j9s.png)
 
 **UML gerado para o exercício que solucionei**
+
+## Creational patterns (Padrões criacionais)
+
+### Builder
