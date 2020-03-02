@@ -5,7 +5,7 @@ Esse repositório irá conter alguns **design patterns** com alguns exemplos apl
 
 A intenção desse repositório é servir de estudo e consulta, uma vez que eu vá aprimorando e aprendendo novos padrões de design, porém espero que não sirva apenas para mim.
 
-Meus dois principais guias nesses estudos foram o site **Refactoring Guru**, que é um excelente site com exemplos em diversas linguagens para design patterns e refatoração, e o curso da **Alura** de **Design Patterns com Java**, onde o professor Maurício explica o conceito e consigo ver em uma aula sua aplicação.
+Meus dois principais guias nesses estudos foram o site **[Refactoring Guru]**, que é um excelente site com exemplos em diversas linguagens para design patterns e refatoração, e o curso da **[Alura]** de **Design Patterns com Java**, onde o professor Maurício explica o conceito e consigo ver em uma aula sua aplicação.
 
 A maioria (se não todos) dos design patterns nos pacotes conterão exemplos desses dois sites, além de um exemplo que criei a partir do momento em que eu estudava, ou de um exercício encontrado na internet.
 
@@ -67,7 +67,7 @@ devolverá a instância do dia corretamente, escrevendo o texto para o dia da se
 
 ### Chain of Responsability
 No pacote referente ao **Chain of Responsability** iremos encontrar quatro exemplos, um 
-da **Alura**, um do **Refactoring Guru**, um que criei onde simula uma máquina de vendas e 
+da **[Alura]**, um do **[Refactoring Guru]**, um que criei onde simula uma máquina de vendas e 
 por último um exemplo que tirei da *cachola* a fim de passar uma reclamação para a área responsável.
 
 Tal pattern consiste em abstrairmos em uma interface ou em uma classe abstrata (para unirmos
@@ -76,7 +76,7 @@ Os **handlers** serão classes concretas que terão comportamentos específicos.
 **fluxo**, a ideia é que cada **handler** execute seu comportamento e passe para o próximo **handler** da cadeia, até que
 se quebre por algum motivo ou passe por todo esse fluxo que foi definido.
 
-Por exemplo o código da Alura, é simulado que existam produtos em um orçamento, e você poderá ganhar desconto
+Por exemplo o código da [Alura], é simulado que existam produtos em um orçamento, e você poderá ganhar desconto
 dependendo da quantidade de itens ou do valor total dos itens que você tiver no seu orçamento.
 
 Nossa cadeia será abstraida por uma interface chamada de **Desconto**, e as classes concretas (**DescontoPorCincoItens**, 
@@ -84,9 +84,9 @@ Nossa cadeia será abstraida por uma interface chamada de **Desconto**, e as cla
 de desconto ou não, caso seja a classe responsável por essa verificação irá retornar o desconto do orçamento, caso não 
 irá chegar na classe **SemDesconto** onde retornará 0.
 
-O exemplo da Alura é mais tranquilo e legal de se ver funcionando o **Chain**, entretanto o exemplo do Refactoring Guru, 
+O exemplo da [Alura] é mais tranquilo e legal de se ver funcionando o **Chain**, entretanto o exemplo do [Refactoring Guru], 
 que inclusive usei de base para solucionar os outros exemplos que resolvi, é mais elegante pois vemos o boiling plate
-apenas na classe abstrata, ao contrário da Alura que utiliza interface, te obrigando a reescrever esse código. 
+apenas na classe abstrata, ao contrário da [Alura] que utiliza interface, te obrigando a reescrever esse código. 
 
 ### Template Method
 
@@ -96,7 +96,7 @@ apenas na classe abstrata, ao contrário da Alura que utiliza interface, te obri
 
 ### Decorator
 
-No pacote **Decorator** estão dois exemplos, um do site Refactoring Guru, outro foi um exercício que encontrei na internet
+No pacote **Decorator** estão dois exemplos, um do site [Refactoring Guru], outro foi um exercício que encontrei na internet
 onde deveria solucionar utilizando o pattern **Decorator**.
 
 Tal pattern consiste em uma interface (*component*) que será implementado pelo o que chamamos de *concrete component*. 
@@ -106,7 +106,7 @@ Teremos também o que chamaremos de *base decorator* onde também implementará 
 Os *concrete decorators* serão responsáveis por mudar o comportamento antes que ocorra a principal função que deverá ocorrer
 (código que fica no *concrete component*).
 
-No site Refactoring Guru foi-se utilizado um exemplo onde se irá escrever um arquivo (*concrete component*), e antes
+No site [Refactoring Guru] foi-se utilizado um exemplo onde se irá escrever um arquivo (*concrete component*), e antes
 que isso ocorra, ou seja, antes de escrever o arquivo, iremos usar os *concrete decorators* para podermos, se quisermos,
 criptografar e/ou comprimir o arquivo.
 
@@ -135,3 +135,6 @@ para retornar o texto da forma que eu bem entender.
 ## Creational patterns (Padrões criacionais)
 
 ### Builder
+
+[Refactoring Guru]: https://refactoring.guru/
+[Alura]: https://www.alura.com.br/
