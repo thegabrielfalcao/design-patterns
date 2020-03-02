@@ -1,6 +1,6 @@
-package br.com.thegabrielfalcao.designpatterns.strategy.context;
+package br.com.thegabrielfalcao.designpatterns.strategy.gabrielfalcao.context;
 
-import br.com.thegabrielfalcao.designpatterns.strategy.context.strategies.OperacaoMatematica;
+import br.com.thegabrielfalcao.designpatterns.strategy.gabrielfalcao.context.strategies.OperacaoMatematica;
 
 /**
  * A classe Calculadora no caso é o contexto
