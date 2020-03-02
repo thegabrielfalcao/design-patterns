@@ -7,7 +7,7 @@ import br.com.thegabrielfalcao.designpatterns.builder.gabrielfalcao.model.Pessoa
 public class Main {
     public static void main(String[] args) {
 
-        //Utilizando o builder diretamente para criar uma pessoa
+        //Utilizando o builders diretamente para criar uma pessoa
         PessoaBuilder builder = new PessoaBuilder(new Pessoa());
         builder.comNome("Roberto").comAltura(2.).comCorDosOlhos("Azul").comEtnia("Afrodescendente").comPeso(75.);
         Pessoa pessoa = builder.build();
