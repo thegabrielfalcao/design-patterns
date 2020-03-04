@@ -7,6 +7,13 @@ import br.com.thegabrielfalcao.designpatterns.builder.refactoringguru.components
 import br.com.thegabrielfalcao.designpatterns.builder.refactoringguru.components.Transmission;
 import br.com.thegabrielfalcao.designpatterns.builder.refactoringguru.components.TripComputer;
 
+/**
+ * No exemplo do Refactoring Guru, o builder contêm atributos iguais ao do objeto, para que ele possa passar para o
+ * objeto a ser criado quando for chamar a função getResult()
+ *
+ * Particularmente prefiro a abordagem que criei no package gabrielfalcao, onde o builder retornará precisa do objeto
+ * instanciado para ser criado, e seta direto no objeto
+ */
 public class CarBuilder implements Builder {
     private Type type;
     private int seats;
