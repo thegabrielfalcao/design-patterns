@@ -90,6 +90,50 @@ apenas na classe abstrata, ao contrário da [Alura] que utiliza interface, te ob
 
 ### Template Method
 
+No pacote referente ao **Template Method** temos dois exemplos até o momento, um do [Refactoring Guru] 
+e outro criado por mim.
+
+Tal pattern consiste em utilizarmos uma classe abstrata que servirá como esqueleto, onde teremos o,
+de fato, *template method*, que será o método que definirá o fluxo principal, e diversos outros métodos
+que serão (não obrigatoriamente) abstratos e utilizados dentro do *template method*. Classes concretas deverão extender 
+desta classe abstrata e dar sua própria implementação dos métodos abstratos, porém seguirá o fluxo definido no *template method*.
+
+Como sou péssimo explicando, vamos ao exemplo abaixo:
+
+No exemplo do [Refactoring Guru] devemos imaginar que queremos trabalhar com diferentes redes sociais,
+como por exemplo o Twitter e o Facebook, e queremos efetuar certas ações com as duas redes sociais.
+
+Temos então a classe **Network**, que é a classe abstrata onde teremos o método *post()*. Esse método
+contém as regras do que iremos fazer que no caso são: 
+
+- Logaremos na rede
+- Caso tenhamos sucesso ao logar, iremos enviar uma mensagem e logo após deslogar
+- Caso a mensagem seja enviada com sucesso, iremos retornar *true* no método, caso contrário *false*
+- Caso não tenhamos sucesso, apenas retornaremos *false* no método
+
+Perceba que temos esse fluxo a ser respeitado, mas a forma de se logar, enviar mensagem e efetuar o logout
+será diferente em cada rede social, logo abstraimos esses comportamentos para métodos abstratos dentro da classe **Network**
+e deixaremos as classes concretas responsáveis por cada rede social implementar da sua forma.
+
+Logo teremos as classes **Facebook** e **Twitter** extendendo de **Network**, que irão obrigatoriamente manter 
+o método *post()* porém irão reescrever os métodos de logar, enviar mensagem e de logout.
+
+>Acho legal ressaltar que no caso do Facebook adicionamos um novo step dentro do logIn(), sem influenciar em
+>nada o fluxo do método *post()*
+
+O que achei legal nesse pattern foi a facilidade de criarmos outras classes que seguirão esse método,
+por exemplo no case do [Refactoring Guru] caso desejássemos adicionar novas redes sociais, apenas deveríamos 
+criar uma classe para cada rede social nova, extender de **Network**, reescrever os métodos e pronto, já estaria apto a 
+ser utilizado pelo cliente desse método!
+
+![TemplateMethod Image](https://refactoring.guru/images/patterns/diagrams/template-method/structure.png) 
+
+**UML do pattern Template Method**
+
+![TemplateMethod RefactoringGuru Image](https://image.prntscr.com/image/L3CXJYgLRuaO7UN3dNNnIQ.png)
+
+**UML do exemplo do site Refactoring Guru**
+
 ### State
 
 ## Structural patterns (Padrões estruturais)
