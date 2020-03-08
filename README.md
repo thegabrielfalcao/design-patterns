@@ -21,6 +21,7 @@ repositório apenas para ver como foi implementado nos exemplos que commitei.
     - [Chain of Responsability](#Chain-of-Responsability)
     - [Template Method](#Template-Method)
     - [State](#State)
+    - [Observer](#Observer)
 - Padrões estruturais
     - [Decorator](#Decorator)
 - Padrões criacionais
@@ -135,6 +136,8 @@ ser utilizado pelo cliente desse método!
 **UML do exemplo do site Refactoring Guru**
 
 ### State
+
+### Observer
 
 ## Structural patterns (Padrões estruturais)
 
