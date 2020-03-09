@@ -209,7 +209,6 @@ comportamento principal de retornar essa String, ou seja, agora eu tenho uma cla
 caixa alta, tornar esse texto tagueado, e tornar esse texto invertido, podendo utilizar nenhum, um ou todos esses decorators 
 para retornar o texto da forma que eu bem entender.
 
-
 ![Decorator Image](https://refactoring.guru/images/patterns/diagrams/decorator/structure.png)
 
 **UML do pattern Decorator**
@@ -221,6 +220,37 @@ para retornar o texto da forma que eu bem entender.
 ## Creational patterns (Padrões criacionais)
 
 ### Builder
+
+No pacote **Builder** temos três exemplos, um do [Refactoring Guru], um da [Alura] e outro criado por mim.
+
+Tal pattern consiste na criação de objetos complexos de forma simplificada, evitando utilizar o inúmeros **set...()** ou
+um construtor gigantesco com várias referências nula.
+
+Para exemplificar utilizarei o exemplo da Alura, onde nosso problema é criar o objeto NotaFiscal. Tal objeto contém 
+inúmeros atributos e cairíamos exatamente nos problemas citados acima, e solucionaremos isso com o pattern **Builder**.
+
+Criamos uma classe chamada **NotaFiscalBuilder**, essa classe será responsável por criar os objetos NotaFiscal. Tal classe
+conterá todos os atributos que o **NotaFiscal** tem. Tal builder irá ter um método valorar cada atributo do NotaFiscal, porém
+esses métodos retornarão o próprio **NotaFiscalBuilder** para que possamos setar um valor atrás do outro, e por fim chamar o método
+**construir()** que retornará uma referência do objeto **NotaFiscal**.
+
+Para ficar mais fácil a visualização, note a implementação
+pelo client abaixo:
+
+![Implementation Builder](https://image.prntscr.com/image/ZQQEkuu6S2WonxHoY049sA.png)
+
+Tal pattern é ótimo para criação dos objetos complexos. Vale ressaltar que existe uma classe opcional que podemos
+utilizar chamada de **Director**, tal classe conteria o builder e retornaria uma instância que ocorre a todo momento no sistema.
+
+Podemos observar o exemplo de utilização dessa classe opcional nos pacotes **refactoringguru** e **gabrielfalcao**.
+
+![UML Builder](https://refactoring.guru/images/patterns/diagrams/builder/structure.png)
+
+**UML do pattern Builder**
+
+![UML Implementation Builder](https://image.prntscr.com/image/5uODOJymSr6-Jjkj4U5q6Q.png)
+
+**UML do exemplo da Alura**
 
 [Refactoring Guru]: https://refactoring.guru/
 [Alura]: https://www.alura.com.br/
