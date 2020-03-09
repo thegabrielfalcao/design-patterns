@@ -26,6 +26,7 @@ repositório apenas para ver como foi implementado nos exemplos que commitei.
     - [Decorator](#Decorator)
 - Padrões criacionais
     - [Builder](#Builder)
+    - [Factory Method](#Factory-Method)
 
 ## Behavioral patterns (Padrões comportamentais)
 
@@ -251,6 +252,8 @@ Podemos observar o exemplo de utilização dessa classe opcional nos pacotes **r
 ![UML Implementation Builder](https://image.prntscr.com/image/5uODOJymSr6-Jjkj4U5q6Q.png)
 
 **UML do exemplo da Alura**
+
+### Factory Method
 
 [Refactoring Guru]: https://refactoring.guru/
 [Alura]: https://www.alura.com.br/
