@@ -137,6 +137,45 @@ ser utilizado pelo cliente desse método!
 
 ### State
 
+No pacote **State** temos dois exemplos, ambos do [Refactoring Guru], sendo que um é a cópia
+do exemplo deles em Java, já o segundo eu passei o exemplo deles em *pseudocode* para o Java.
+
+Parafraseando esse site, o pattern **State** consiste em permitir que um objeto mude seu comportamento
+quando seu estado interno for alterado. Tal site utiliza uma ótima analogia para que possamos entender esse pattern:
+
+Os botões de um smartphone se comportam de forma diferente dependendo do estado atual do seu dispositivo:
+
+- Quando o aparelho está desbloqueado, esses botões podem executam várias funções
+- Quando o aparelho está bloqueado, pressionar qualquer botão leva o aparelho a desbloquear a tela
+- Quando o aparelho está sem bateria mas carregando, pressionar qualquer botão mostra a tela com ele carregando
+
+Esse exemplo é uma ótima forma de entendermos o pattern **State**.
+
+No pacote **anotherrefactoringguru** está implementado um exemplo onde um usuário pode publicar um texto, mas existem 
+algumas regras:
+
+- Tal documento pode estar em três estágios: **Draft**, **Moderation** ou **Published**. Tais estágios foram abstraidos para
+classes.
+
+- O texto ao ser criado sempre passará pelo estado de **Draft**, porém: 
+
+    - Caso o usuário que o publicou seja administrador ele irá alterar o estado do texto para **Published** 
+    (Visto que um admin não precisa de permissão para publicar).
+    
+    - Caso o usuário não seja um administrador, tal documento irá passar para o estado de **Moderation**, e só sairá desse
+    estado quando algum usuário administrador publicá-lo (simulando uma aprovação).
+
+Dessa forma utilizamos a composição para alterar os estados dentro de um objeto, onde os estados que estão abstraidos 
+em classes tem a visibilidade do objeto que os contém para que eles possam intercambiar de um estado para outro.
+
+![State Image](https://refactoring.guru/images/patterns/diagrams/state/structure-en.png) 
+
+**UML do pattern State**
+
+![State Example Image](https://image.prntscr.com/image/cPvRDqVBQaKc8DBLuFug_w.png) 
+
+**UML do pacote anotherrefactoringguru implementando o State**
+
 ### Observer
 
 ## Structural patterns (Padrões estruturais)
