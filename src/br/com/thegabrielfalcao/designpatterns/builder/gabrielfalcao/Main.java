@@ -8,13 +8,13 @@ public class Main {
     public static void main(String[] args) {
 
         //Utilizando o builders diretamente para criar uma pessoa
-        PessoaBuilder builder = new PessoaBuilder(new Pessoa());
+        PessoaBuilder builder = new PessoaBuilder();
         builder.comNome("Roberto").comAltura(2.).comCorDosOlhos("Azul").comEtnia("Afrodescendente").comPeso(75.);
         Pessoa pessoa = builder.build();
         System.out.println(pessoa);
 
         //Agora usaremos a classe Director, onde podemos ter perfis pré-definidos
-        builder = new PessoaBuilder(new Pessoa());
+        builder.reset();
         Director director = new Director(builder);
 
         //Primeiro uma pessoa obesa

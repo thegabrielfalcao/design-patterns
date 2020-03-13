@@ -15,6 +15,19 @@ public class Pessoa {
     private Double altura;
     private String etnia;
 
+    public Pessoa(String nome, LocalDate nascimento, String cpf, Character sexo, Boolean isTrabalhando, Boolean isPCD, String corDosOlhos, Double peso, Double altura, String etnia) {
+        this.nome = nome;
+        this.nascimento = nascimento;
+        this.cpf = cpf;
+        this.sexo = sexo;
+        this.isTrabalhando = isTrabalhando;
+        this.isPCD = isPCD;
+        this.corDosOlhos = corDosOlhos;
+        this.peso = peso;
+        this.altura = altura;
+        this.etnia = etnia;
+    }
+
     public String getNome() {
         return nome;
     }

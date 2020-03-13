@@ -6,63 +6,81 @@ import java.time.LocalDate;
 
 public class PessoaBuilder {
 
-    private Pessoa pessoa;
-
-    public PessoaBuilder(Pessoa pessoa) {
-        this.pessoa = pessoa;
-    }
+    private String nome;
+    private LocalDate nascimento;
+    private String cpf;
+    private Character sexo;
+    private Boolean isTrabalhando;
+    private Boolean isPCD;
+    private String corDosOlhos;
+    private Double peso;
+    private Double altura;
+    private String etnia;
 
     public PessoaBuilder comNome(String nome) {
-        pessoa.setNome(nome);
+        this.nome = nome;
         return this;
     }
 
     public PessoaBuilder comDataDeNascimento(LocalDate dataNascimento) {
-        pessoa.setNascimento(dataNascimento);
+        this.nascimento = dataNascimento;
         return this;
     }
 
     public PessoaBuilder comCpf(String cpf) {
-        pessoa.setCpf(cpf);
+        this.cpf = cpf;
         return this;
     }
 
     public PessoaBuilder comSexo(Character sexo) {
-        pessoa.setSexo(sexo);
+        this.sexo = sexo;
         return this;
     }
 
     public PessoaBuilder isTrabalhando(Boolean isTrabalhando) {
-        pessoa.setTrabalhando(isTrabalhando);
+        this.isTrabalhando = isTrabalhando;
         return this;
     }
 
     public PessoaBuilder isPCD(Boolean isPCD) {
-        pessoa.setPCD(isPCD);
+        this.isPCD = isPCD;
         return this;
     }
 
     public PessoaBuilder comCorDosOlhos(String corDosOlhos) {
-        pessoa.setCorDosOlhos(corDosOlhos);
+        this.corDosOlhos = corDosOlhos;
         return this;
     }
 
     public PessoaBuilder comPeso(Double peso) {
-        pessoa.setPeso(peso);
+        this.peso = peso;
         return this;
     }
 
     public PessoaBuilder comAltura(Double altura) {
-        pessoa.setAltura(altura);
+        this.altura = altura;
         return this;
     }
 
     public PessoaBuilder comEtnia(String etnia) {
-        pessoa.setEtnia(etnia);
+        this.etnia = etnia;
         return this;
     }
 
     public Pessoa build() {
-        return this.pessoa;
+        return new Pessoa(nome, nascimento, cpf, sexo, isTrabalhando, isPCD, corDosOlhos, peso, altura, etnia);
+    }
+
+    public void reset() {
+        this.nome           = null;
+        this.nascimento     = null;
+        this.cpf            = null;
+        this.sexo           = null;
+        this.isTrabalhando  = null;
+        this.isPCD          = null;
+        this.corDosOlhos    = null;
+        this.peso           = null;
+        this.altura         = null;
+        this.etnia          = null;
     }
 }
